@@ -183,7 +183,7 @@ Disadvantages:
 ### Look whether results make sense and how far predictions are
 
 When we look to historic data (we can't know yet CVE data for the future),
-it's always possible that the model just cheats and learns what 
+it's always possible that the model just cheats, so needs double checking
 
 ### Experiment
 
