@@ -1,4 +1,5 @@
 # codaq-score
+
 Code A Quality Score to predict security bugs or maintainance burden in the future
 
 ## Idea
@@ -140,9 +141,9 @@ if the sample includes 30% of the code base, we probably won't expect to see 100
 but something in relation to the input size.
 
 It's something to learn to (gut feeling: the relation is not linear, maybe more sqrt or logarithmic),
-so we probably need to learn something like:
+so we probably need a `f_weighting` to learn something like:
 
-    target_specific_score_for_training = f(fraction_code_covered, fraction_documentation_covered, ...) * target_total
+    target_specific_score_for_training = f_weighting(fraction_code_covered, fraction_documentation_covered, ...) * target_total
 
 ## Roadmap
 
@@ -150,7 +151,7 @@ so we probably need to learn something like:
 
 * Get maybe 5k-10k github repos (maybe 5k top github repos, plus 5k github repos most mentioned in CVEs)
 * Get CVE data
-* prepare training data
+* Prepare training data
 
 ### POC with a cheap model
 
