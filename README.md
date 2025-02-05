@@ -161,7 +161,7 @@ Advantages:
   * see where worst scores intersect
   * so you can see whether whole project is high/low risk
   * or just some parts of it
-* Allows parallelization#
+* Allows parallelization
 * Hopefully runs on cheap hardware
 * Harder to play the score
 
