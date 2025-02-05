@@ -145,6 +145,31 @@ so we probably need a `f_weighting` to learn something like:
 
     target_specific_score_for_training = f_weighting(fraction_code_covered, fraction_documentation_covered, ...) * target_total
 
+
+#### Inference
+
+Take multiple samples of the code base,
+and predict the target scores.
+Then summarize the inferences into one score (probably in the beginning just average score multiplicated by 1 / f_weighting.
+
+Advantages:
+
+* Automated augmentation
+* Can construct a learnable method to summarize results beside just averaging scoring
+* Can give an idea of uncertainty and how code quality is overall in the project by looking at 
+  * histogram of min/max distribution of the score
+  * see where worst scores intersect
+  * so you can see whether whole project is high/low risk
+  * or just some parts of it
+* Allows parallelization#
+* Hopefully runs on cheap hardware
+* Harder to play the score
+
+Disadvantages:
+
+* Higher inference costs
+* Inference results might be non deterministic 
+
 ## Roadmap
 
 ### Collect and understand training data
